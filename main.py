@@ -40,3 +40,9 @@ def predict(profile: StudentProfile):
     prediction = model.predict(input_df)
 
     return {"predicted_course": prediction[0]}
+
+
+# ✅ Add this route
+@app.get("/")
+def read_root():
+    return {"message": "FastAPI is up and running!"}
